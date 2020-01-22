@@ -92,6 +92,9 @@ img {
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 300;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo span {
   font-weight: 700;
@@ -117,6 +120,9 @@ img {
 }
 .user-nav a.link {
   color: var(--user-nav-font-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts {
   display: inline-flex;
@@ -159,6 +165,7 @@ img {
 .user a.link {
   padding-left: 17px;
   padding-right: 17px;
+  
 }
 .user li:last-child a {
   padding-right: 0px;
@@ -180,11 +187,15 @@ img {
   justify-content: space-between;
   padding-top: 43px;
   padding-bottom: 30px;
+  
 }
 
 .site a.link {
   padding-right: 17px;
   padding-left: 17px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site li:last-child a {
   padding-right: 0px;
@@ -225,9 +236,10 @@ img {
   color: var(--hero-banner-font-color);
   background-image: linear-gradient(to bottom, rgba(40, 40, 40, 0.52), rgba(40, 40, 40, 0.52)),
     url(../images/backgrounds/hero-bg-pic.png);
-  background-repeat: no-repeat;
+    /* background-position: center; */
+    background-repeat: no-repeat;
   background-size: cover;
-  background-position: inherit;
+  /* background-position: inherit; */
 }
 h1 {
   text-align: center;
@@ -277,11 +289,7 @@ h1 {
   font-size: 18px;
   line-height: 32px;
 }
-.setting,
-.money-back,
-.ww-shipping,
-.shipping-direction {
-}
+
 .list-about li::before {
   content: '';
   display: block;
@@ -345,11 +353,13 @@ h1 {
 }
 
 .description-price {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 255px;
   height: 40px;
+  z-index: 2;
 }
 .description {
   display: flex;
@@ -363,6 +373,9 @@ h1 {
   color: var(--product-heading-text-color);
   background-color: var(--signature-name-bg-color);
   text-transform: uppercase;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .price {
   display: flex;
@@ -374,6 +387,9 @@ h1 {
   color: var(--product-heading-text-color);
   background-color: var(--signature-price-bg-color);
   align-items: center;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .product:hover .description,
 .product:focus .description {
@@ -390,11 +406,26 @@ h1 {
   width: 100%;
   align-items: center;
   justify-content: center;
+  z-index: 0;
 }
 .img-container img {
   height: 100%;
   width: 100%;
   object-fit: scale-down;
+}
+.img-container::before {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  border: 10px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  transition-property: top;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
 }
 /* Interactive */
 .interactive {
@@ -404,6 +435,8 @@ h1 {
   flex-wrap: wrap;
   width: 166px;
   height: 108px;
+  z-index: 1;
+  /* opacity: 0; */
 }
 .interactive button {
   display: inline-flex;
@@ -416,6 +449,9 @@ h1 {
   padding: 0;
   margin-right: 8px;
   margin-bottom: 8px;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .interactive button::before {
 
@@ -463,16 +499,6 @@ h1 {
   background-color: var(--accent-color);
 }
 
-.img-container::before {
-  display: block;
-  content: '';
-  position: absolute;
-  left: 100%;
-  width: 100%;
-  height: 100%;
-  border: 10px solid rgba(255, 255, 255, 0.5);
-  background-color: rgba(0, 0, 0, 0.5);
-}
 .product:hover .img-container::before,
 .product:focus .img-container::before {
   top: 0;
@@ -483,6 +509,7 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  
 }
 
 /* News part */
@@ -578,6 +605,9 @@ h1 {
   background-color: var(--accent-color);
   width: 160px;
   height: 50px;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover,
 .button:focus {
@@ -595,9 +625,15 @@ h1 {
   background-color: var(--accent-color);
   width: 120px;
   height: 42px;
+  transition-property: background-color, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
+
 }
+
 .button-hero:hover,
 .button-hero:focus {
   border-color: var(--signature-price-bg-focus-color);
   background-color: var(--signature-price-bg-focus-color);
-}
+ }
