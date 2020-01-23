@@ -139,6 +139,12 @@ img {
   padding-left: 17px;
   padding-right: 17px;
 }
+.contacts li a:hover,
+.contacts li a:focus{
+  color:var(--signature-price-bg-focus-color) 
+} 
+
+
 .phone-number::before {
   content: '';
   display: block;
@@ -590,6 +596,14 @@ h1 {
   border-radius: 0 5px 5px 0;
   background-color: var(--accent-color);
   padding-left: 25px;
+  transition-property: background-color, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.email-button:hover,
+.email-button:focus{
+  border-color: var(--signature-price-bg-focus-color);
+  background-color: var(--signature-price-bg-focus-color);
 }
 .email-button::before {
   display: flex;
@@ -599,6 +613,7 @@ h1 {
   background-image: url(../images/icons/interactiv-icons/submit.svg);
   background-position: center;
   background-repeat: no-repeat;
+  
 }
 
 .button {
