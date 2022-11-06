@@ -22,7 +22,9 @@
   --icon-background-color: rgba(255, 255, 255, 0.1);
   --hero-background-color: #c4c4c4;
   --project-description-bg-color: rgba(33, 150, 243, 0.9);
-  --modal-hedinf-font-size: 20px;
+  --modal-heding-font-size: 20px;
+  --modal-field-heading-font-size: 12px;
+  --modal-field-border-color: rgba(33, 33, 33, 0.2);
 }
 html {
   box-sizing: border-box;
@@ -792,12 +794,114 @@ body {
   fill: var(--color-black);
 }
 
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
 .modal-heading {
   color: var(--main-text-color);
   font-weight: 700;
-  font-size: var(--modal-hedinf-font-size);
+  font-size: var(--modal-heding-font-size);
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 12px;
+}
+
+.modal-input-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.modal-textarea-field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.field-heading {
+  color: var(--secondary-text-color);
+  font-size: var(--modal-field-heading-font-size);
+  line-height: 1.17;
+  margin-bottom: 4px;
+}
+
+.field-input {
+  height: 40px;
+  border: 1px solid var(--modal-field-border-color);
+  border-radius: 4px;
+  padding-left: 42px;
+}
+
+.modal-comment {
+  height: 120px;
+  border: 1px solid var(--modal-field-border-color);
+  border-radius: 4px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  padding-bottom: 16px;
+  font-family: var(--main-font);
+  font-size: var(--modal-field-heading-font-size);
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  resize: none;
+}
+
+.modal-checkbox-field {
+  display: flex;
+  align-items: center;
+  color: var(--secondary-text-color);
+  font-weight: 400;
+  font-size: var(--main-font-size);
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  margin-bottom: 30px;
+}
+
+.modal-chb-symbol {
+  display: block;
+  margin-right: 7px;
+}
+
+.check-box-sign-label {
+  display: block;
+}
+
+.terms-conditions {
+  color: var(--accent-color);
+}
+
+.form-submit-btn {
+  background-color: var(--accent-color);
+  font-family: inherit;
+  color: var(--color-white);
+  font-size: var(--secondary-font-size);
+  font-weight: 700;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  border-color: transparent;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px var(--shadow-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  padding-left: 28px;
+  padding-right: 28px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 50px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input-field-icon {
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
 }
