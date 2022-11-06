@@ -398,6 +398,16 @@
             </li>
           </ul>
         </div>
+        <form class="email-subscribe-form">
+          <label for="email" class="email-subscribe-heading">Підпишіться на розсилку</label>
+          <input type="email" name="email" id="email" placeholder="E-mail" class="footer-email-input" />
+          <button type="submit" class="email-subscribe-btn">
+            Підписатися
+            <svg class="email-subscribe-btn-icon" width="24" height="24">
+              <use href="./images/svg/icons.svg#icon-send"></use>
+            </svg>
+          </button>
+        </form>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -407,6 +417,15 @@
             <use href="./images/svg/icons.svg#icon-close-black"></use>
           </svg>
         </button>
+        <p class="modal-heading">Залиште свої дані, ми вам передзвонимо</p>
+        <form class="modal-form">
+          <input type="text" />
+          <input type="text" />
+          <input type="text" />
+          <input type="text" />
+          <input type="checkbox" />
+          <button type="submit">Відправити</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
