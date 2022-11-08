@@ -866,11 +866,21 @@ body {
 
 .modal-chb-symbol {
   display: block;
-  margin-right: 7px;
 }
 
 .check-box-sign-label {
-  display: block;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.check-box-custom-icon {
+  /* position: absolute; */
+  width: 16px;
+  height: 15px;
+  /* background-color: #2196f3; */
+  margin-right: 7px;
+  background-image: url('../images/svg/icons.svg#icon-vector');
 }
 
 .terms-conditions {
